@@ -3,7 +3,7 @@ This repository contains all the code needed to run an experiment task with aVNS
 
 To set up the environment, use pip install -r requirements.py.
 
-The data storage is coded in the scripts and uses P-Drive to save files. In order to continue working on the experiment,
+The data storage is coded in the scripts and uses the P-Drive to save files. In order to continue working on the experiment,
 the device has to be connected to the P-Drive so that the files can be stored there and there is no confusion.
 
 Steps to set up the conda environment (MAC):
