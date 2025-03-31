@@ -13,4 +13,11 @@ PySimpleGUI
 random
 serial
 glob
-
+zipfile
+os.path
+struct
+array
+typing
+enum
+threading
+getpass
