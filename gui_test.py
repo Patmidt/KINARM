@@ -28,21 +28,21 @@ class SettingsForm(QWidget):
         # Stim_port input (with default text)
         stim_port_layout = QHBoxLayout()
         stim_port_label = QLabel("Stim port:")
-        self.stim_port_entry = QLineEdit("/dev/tty.usbserial-1410")  # Default text "COM3"
+        self.stim_port_entry = QLineEdit("/dev/tty.usbserial-1410")  # Default text "COM3" !!! Check the port connection on your device and change this entry for fast use !!!
         stim_port_layout.addWidget(stim_port_label)
         stim_port_layout.addWidget(self.stim_port_entry)
 
         # Sham_port input (with default text)
         sham_port_layout = QHBoxLayout()
         sham_port_label = QLabel("Sham port:")
-        self.sham_port_entry = QLineEdit("/dev/tty.usbserial-1110")
+        self.sham_port_entry = QLineEdit("/dev/tty.usbserial-1110") # !!! Check the port connection on your device and change this entry for fast use !!!
         sham_port_layout.addWidget(sham_port_label)
         sham_port_layout.addWidget(self.sham_port_entry)
 
         # Trigger_port input (with default text)
         trigger_port_layout = QHBoxLayout()
         trigger_port_label = QLabel("Trigger port:")
-        self.trigger_port_entry = QLineEdit("/dev/tty.usbmodem1201")  # Default text "COM8"
+        self.trigger_port_entry = QLineEdit("/dev/tty.usbmodem1201")  # Default text "COM8" !!! Check the port connection on your device and change this entry for fast use !!!
         trigger_port_layout.addWidget(trigger_port_label)
         trigger_port_layout.addWidget(self.trigger_port_entry)
 
