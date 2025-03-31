@@ -1,1 +1,16 @@
+# THIS FILE CONTAILS THE REQUIRED LIBRARIES TO RUN THE CODE PROVIDED IN THIS REPOSITORY
+
+time
+os
+pandas
+numpy
+sys
+PyQt5
+re
+logging
+collections
+PySimpleGUI
+random
+serial
+glob
 
