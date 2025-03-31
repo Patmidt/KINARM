@@ -71,7 +71,7 @@ logger.addHandler(handler)
 date = time.strftime("%Y%m%d")
 
 # get relevant data paths
-file_directory = os.path.abspath(os.path.dirname(__file__)) # directory of this script
+file_directory = '/Volumes/green_groups_re_public/SHARED STUDENTS/SmartVNS/Motor_Learning/Kinarm/Experiment_Code' # os.path.abspath(os.path.dirname(__file__)) # directory of this script
 data_path = os.path.abspath(os.path.join(file_directory, os.path.pardir, "Data")) # path to data folder
 raw_data_path = os.path.abspath(os.path.join(data_path, os.path.pardir, "Raw_Data")) # path to Raw_Data folder
 print(f"Resolved file path: {raw_data_path}")
@@ -86,7 +86,8 @@ wait_duration = 2     # qqtime after the stimulation
 # get path for calibration files
 
 # all files within the stimulation_config folder
-all_files = os.listdir(os.path.join(file_directory, 'stimulation_config'))
+stim_path = os.path.abspath(os.path.dirname(__file__))
+all_files = os.listdir(os.path.join(stim_path, 'stimulation_config'))
 
 # get all files with todays date and right ID for Sham and aVNS
 date = time.strftime("%Y%m%d")
@@ -151,9 +152,9 @@ def impedance_measure(sham_trial):
         device_name = 'Device6'
         result = deviceConnection1.read()
 
-    # IMPORTANT FOR SHAM
+#     # IMPORTANT FOR SHAM
 
-    # if it is a sham trial the device is called "Device3" and the readout is done on the Sham stimulator
+    if it is a sham trial the device is called "Device3" and the readout is done on the Sham stimulator
     if sham_trial:
         device_name = 'Device3'
         result = deviceConnection2.read()
@@ -243,7 +244,7 @@ print("AVNS:")
 print(calibration_avns_file)
 
 # load aVNS calibration file and extract the amplitude in first (and only) row
-df_calibration_avns = pd.read_csv(os.path.join(file_directory, 'stimulation_config', f'{calibration_avns_file}'))
+df_calibration_avns = pd.read_csv(os.path.join(stim_path, 'stimulation_config', f'{calibration_avns_file}'))
 amplitude_avns = df_calibration_avns["Amplitude_Left [uA]"][0]
 
 # save the aVNS calibration file for later analysis
@@ -388,7 +389,7 @@ start_time = time.time()
 # ___________________ start testing the conditions __________________
 
 ######### here, only one intensity is used for aVNS and Sham:
-setting the calibrated sham and aVNS intensities for both of the stimulators once
+# setting the calibrated sham and aVNS intensities for both of the stimulators once
 deviceConnection2.send(
     msgFactory.encrypt_message(
         MSGTYPES.MSG_FORWARDAMPLITUDE, int(amplitude_sham)))
