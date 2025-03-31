@@ -18,7 +18,7 @@ else:
     print("No valid input received.")
 
 # Define the directory and file path
-file_directory = os.path.abspath(os.path.dirname(__file__))  # Directory of the script
+file_directory = '/Volumes/green_groups_re_public/SHARED STUDENTS/SmartVNS/Motor_Learning/Kinarm/Experiment_Code' # os.path.abspath(os.path.dirname(__file__))  # Directory of the script
 file_path = os.path.abspath(os.path.join(file_directory, os.path.pardir, "Data", "Preprocessed_Data"))  # Modify as needed
 
 

@@ -5,7 +5,7 @@ import sys  # Import sys module to exit the script
 
 def group_assignment(participant_to_update):
     # Load existing Excel file
-    file_directory = os.path.abspath(os.path.dirname(__file__)) # directory of this script
+    file_directory = '/Volumes/green_groups_re_public/SHARED STUDENTS/SmartVNS/Motor_Learning/Kinarm/Experiment_Code' # os.path.abspath(os.path.dirname(__file__)) # directory of this script
     file_path = os.path.abspath(os.path.join(file_directory, os.path.pardir, 'Data')) # path to data folder
     file_location = os.path.join(file_path, 'Stim_type.xlsx')
     df = pd.read_excel(file_location, engine='openpyxl')
