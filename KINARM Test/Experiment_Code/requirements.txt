@@ -1,0 +1,9 @@
+# THIS FILE CONTAILS THE REQUIRED LIBRARIES TO RUN THE CODE PROVIDED IN THIS REPOSITORY
+
+pandas
+numpy
+PyQt5
+PySimpleGUI
+serial
+typing
+openpyxl
